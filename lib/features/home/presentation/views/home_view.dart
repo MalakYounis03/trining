@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:trining/core/utils/app_colors.dart';
+import 'package:trining/core/widgets/custum_app_bar.dart';
 import 'package:trining/features/home/presentation/views/widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -6,9 +8,14 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      extendBodyBehindAppBar: true,
-      //   appBar: CustomAppBar(),
+    return Scaffold(
+      backgroundColor: AppColors.primary,
+      //  extendBodyBehindAppBar: true,
+      appBar: CustumAppBar(
+        title: "الرئيسية",
+        icon: Icons.grid_view_sharp,
+        onPressed: () {},
+      ),
       // drawer: CustomDrawer(),
       body: HomeViewBody(),
     );
