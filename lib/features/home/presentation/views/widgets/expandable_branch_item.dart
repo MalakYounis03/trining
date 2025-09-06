@@ -65,7 +65,6 @@ class ExpandableBranchItem extends StatelessWidget {
             child: Padding(
               padding: EdgeInsetsDirectional.only(top: 14),
               child: BranchItem(
-                title: "الفروع",
                 branchName: branchName,
                 branchNameEnglish: branchNameEnglish,
                 landline: landline,

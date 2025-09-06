@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:trining/core/utils/app_colors.dart';
 import 'package:trining/core/utils/app_routes.dart';
 import 'package:trining/features/home/presentation/views/widgets/branch_item.dart';
+import 'package:trining/features/room/widgets/details_button.dart';
 
 class DetailsBoxHomeItem extends StatelessWidget {
   const DetailsBoxHomeItem({super.key});
@@ -25,11 +26,16 @@ class DetailsBoxHomeItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           border: Border.all(color: AppColors.borderColor),
         ),
-        child: BranchItem(
-          title: "الفروع",
-          branchName: 'تو بوب تيك',
-          branchNameEnglish: 'Too pop Tech',
-          contactNumber: '0594600244',
+        child: Column(
+          children: [
+            BranchItem(
+              branchName: 'تو بوب تيك',
+              branchNameEnglish: 'Too pop Tech',
+              contactNumber: '0594600244',
+            ),
+            SizedBox(height: 10),
+            DetailsButton(),
+          ],
         ),
       ),
     );

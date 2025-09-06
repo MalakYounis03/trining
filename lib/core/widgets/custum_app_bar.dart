@@ -6,11 +6,11 @@ class CustumAppBar extends StatelessWidget implements PreferredSizeWidget {
     super.key,
     required this.title,
     required this.icon,
-    required this.onPressed,
+    this.onPressed,
   });
   final String title;
   final IconData icon;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class CustumAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       leading: IconButton(
         icon: Icon(icon, color: Colors.white),
-        onPressed: onPressed,
+        onPressed: onPressed ?? () => Scaffold.of(context).openDrawer(),
       ),
     );
   }

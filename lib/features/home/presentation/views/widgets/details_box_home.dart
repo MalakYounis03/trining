@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trining/features/home/presentation/views/widgets/details_box_home_item.dart';
+import 'package:trining/features/home/presentation/views/widgets/title_branch_item.dart';
 
 class DetailsBoxHome extends StatelessWidget {
   const DetailsBoxHome({super.key});
@@ -17,7 +18,12 @@ class DetailsBoxHome extends StatelessWidget {
       child: ListView.separated(
         padding: const EdgeInsets.all(16),
         itemBuilder: (context, index) {
-          return const DetailsBoxHomeItem();
+          return Column(
+            children: [
+              TitleBranchItem(title: "الفروع"),
+              DetailsBoxHomeItem(),
+            ],
+          );
         },
         itemCount: 3,
         physics: const AlwaysScrollableScrollPhysics(), // يخليها تتمدّد
