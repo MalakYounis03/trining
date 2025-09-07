@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trining/core/utils/app_colors.dart';
+import 'package:trining/core/utils/app_routes.dart';
 import 'package:trining/core/utils/app_styles.dart';
 
 class DetailsButton extends StatelessWidget {
@@ -10,7 +11,9 @@ class DetailsButton extends StatelessWidget {
     return Align(
       alignment: Alignment.centerLeft, // يبدأ من اليمين
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, AppRoutes.roomDetailsView);
+        },
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.black, // لون الخلفية
           foregroundColor: Colors.white, // لون النص/الرipple

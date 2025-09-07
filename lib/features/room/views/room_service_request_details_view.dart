@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:trining/core/utils/app_colors.dart';
 import 'package:trining/core/utils/app_routes.dart';
 import 'package:trining/core/widgets/custum_app_bar.dart';
-import 'package:trining/features/room/widgets/room_body.dart';
+import 'package:trining/features/room/widgets/room_details_body.dart';
 
-class RoomServiceRequestView extends StatelessWidget {
-  const RoomServiceRequestView({super.key});
+class RoomServiceRequestDetailsView extends StatelessWidget {
+  const RoomServiceRequestDetailsView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,15 +13,14 @@ class RoomServiceRequestView extends StatelessWidget {
       backgroundColor: AppColors.primary,
       //  extendBodyBehindAppBar: true,
       appBar: CustumAppBar(
-        title: "قائمة خدمات الشركة",
-
+        title: "طلب خدمات الغرفة",
         icon: Icons.arrow_back_ios_new,
         onPressed: () {
-          Navigator.pushNamed(context, AppRoutes.homeView);
+          Navigator.pushNamed(context, AppRoutes.roomView);
         },
       ),
       //drawer: CustomDrawer(),
-      body: RoomBody(),
+      body: RoomDetailsBody(),
     );
   }
 }

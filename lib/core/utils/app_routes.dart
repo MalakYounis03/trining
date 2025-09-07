@@ -1,7 +1,9 @@
+import 'package:trining/features/company/views/company_services_list_view.dart';
 import 'package:trining/features/home/presentation/views/branches_view.dart';
 import 'package:trining/features/home/presentation/views/home_view.dart';
-import 'package:trining/features/room/views/room_service_request_view.dart';
+import 'package:trining/features/room/views/room_service_request_details_view.dart';
 import 'package:trining/features/login/presentation/views/login_view.dart';
+import 'package:trining/features/room/views/room_service_request_view.dart';
 import 'package:trining/features/splash/presentation/views/splash_view.dart';
 
 abstract class AppRoutes {
@@ -10,6 +12,8 @@ abstract class AppRoutes {
   static const branchesView = Routes.branchesView;
   static const loginView = Routes.loginView;
   static const roomView = Routes.roomView;
+  static const roomDetailsView = Routes.roomDetailsView;
+  static const companyService = Routes.companyServiceView;
 
   static final routes = {
     Routes.splashView: (context) => const SplashView(),
@@ -17,6 +21,8 @@ abstract class AppRoutes {
     Routes.branchesView: (context) => const BranchesView(),
     Routes.loginView: (context) => const LoginView(),
     Routes.roomView: (context) => const RoomServiceRequestView(),
+    Routes.roomDetailsView: (context) => const RoomServiceRequestDetailsView(),
+    Routes.companyServiceView: (context) => const CompanyServicesListView(),
   };
 }
 
@@ -26,4 +32,6 @@ abstract class Routes {
   static const branchesView = '/branches_view';
   static const loginView = '/login_view';
   static const roomView = '/room_view';
+  static const roomDetailsView = '/room_details_view';
+  static const companyServiceView = '/company_service';
 }

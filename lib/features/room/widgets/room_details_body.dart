@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:trining/core/utils/app_routes.dart';
 import 'package:trining/core/utils/app_styles.dart';
-
 import 'package:trining/features/home/presentation/views/widgets/details_box_home_item.dart';
 
-class RoomBody extends StatelessWidget {
-  const RoomBody({super.key});
+class RoomDetailsBody extends StatelessWidget {
+  const RoomDetailsBody({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
@@ -23,19 +22,13 @@ class RoomBody extends StatelessWidget {
           children: [
             Align(
               alignment: Alignment.centerRight,
-              child: Text(
-                "الخدمات المقدمة من الغرفة التجارية",
-                style: AppStyles.textStyleBold14,
-              ),
+              child: Text("التفاصيل", style: AppStyles.textStyleBold14),
             ),
             Expanded(
               child: ListView.separated(
                 padding: const EdgeInsets.all(16),
                 itemBuilder: (context, index) {
-                  return DetailsBoxHomeItem(
-                    route: AppRoutes.roomDetailsView,
-                    showDetailsButton: true,
-                  );
+                  return DetailsBoxHomeItem(route: AppRoutes.roomDetailsView);
                 },
                 itemCount: 3,
                 physics: const AlwaysScrollableScrollPhysics(), // يخليها تتمدّد

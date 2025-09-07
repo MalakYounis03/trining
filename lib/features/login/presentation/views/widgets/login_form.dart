@@ -61,10 +61,7 @@ class _LoginFormState extends State<LoginForm> {
         child: Container(
           padding: EdgeInsets.fromLTRB(20.w, 24.h, 20.w, 16.h),
           width: double.infinity,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(18.r),
-            color: const Color.fromARGB(255, 142, 230, 160),
-          ),
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(18.r)),
           child: Form(
             key: _formKey,
             child: Column(

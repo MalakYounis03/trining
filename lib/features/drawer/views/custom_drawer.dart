@@ -67,7 +67,9 @@ class CustomDrawer extends StatelessWidget {
             DrawerItem(
               icon: Icons.apartment_outlined,
               title: ' قائمة خدمات الشركة',
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.companyService);
+              },
             ),
 
             SizedBox(height: 30),

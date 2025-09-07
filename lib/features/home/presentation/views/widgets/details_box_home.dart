@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trining/core/utils/app_routes.dart';
 import 'package:trining/features/home/presentation/views/widgets/details_box_home_item.dart';
 import 'package:trining/features/home/presentation/views/widgets/title_branch_item.dart';
 
@@ -21,7 +22,7 @@ class DetailsBoxHome extends StatelessWidget {
           return Column(
             children: [
               TitleBranchItem(title: "الفروع"),
-              DetailsBoxHomeItem(),
+              DetailsBoxHomeItem(route: AppRoutes.branchesView),
             ],
           );
         },
